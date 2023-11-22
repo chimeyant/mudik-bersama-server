@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LAPORAN RENAKSI PER TAHUN </title>
+    <link rel="stylesheet" href="{{ url_style }}" />
+</head>
+{{-- <body> --}}
+
+<style>
+    @media print {
+        @page {
+            size: landscape
+        }
+    }
+</style>
+
+<body onload="window.print()" onafterprint="window.close()">
+    <center>
+        <h4>LAPORAN RENAKSI </h4>
+        <h5>PER TAHUN {{tahun}} </h5>
+    </center>
+
+    <br>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="width:40px;text-align: center;vertical-align: middle" >No.</th>
+                <th style="text-align: center; vertical-align: middle" >Pilar</th>
+                <th  style="text-align: center;vertical-align: middle">Program</th>
+                <th  style="text-align: center;vertical-align: middle">Kegiatan</th>
+                <th  style="text-align: center;vertical-align: middle">Indikator</th>
+                <th  style="text-align: center;vertical-align: middle">Satuan</th>
+                <th  style="text-align: center;vertical-align: middle">Anggaran</th>
+                <th  style="text-align: center;vertical-align: middle">Realisasi</th>
+                <th  style="text-align: center;vertical-align: middle">Sumber</th>
+                <th  style="text-align: center;vertical-align: middle">Capaian (%)</th>
+                <th  style="text-align: center;vertical-align: middle">Instansi</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @each((item,index )in datas)
+              <tr>
+                  <td class="text-right">{{ index+1 }}</td>
+                  <td> {{ item.pilar }} </td>
+                  <td> {{ item.program }} </td>
+                  <td> {{ item.kegiatan }} </td>
+                  <td> {{ item.indikator }} </td>
+                  <td> {{ item.satuan }} </td>
+                  <td class="text-right" > {{ item.anggaran }} </td>
+                  <td class="text-right"> {{ item.realisasi }} </td>
+                  <td class=""> {{ item.sumber }} </td>
+                  <td class="text-center"> {{ item.capaian }} </td>
+                  <td> {{ item.opd }} </td>
+              </tr>
+            @endeach
+        </tbody>
+    </table>
+</body>
+</html>
