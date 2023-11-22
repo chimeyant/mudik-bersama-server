@@ -1,2 +1,2 @@
-# sinikmatlantas-server
-Sistem Informasi Peningkatan Keselamatan Kabupaten Tangerang
+# mudik bersama server
+Sistem Aplikasi Mudik Bersama
