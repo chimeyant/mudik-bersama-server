@@ -32,9 +32,8 @@ Route.get("show-video","HalamanDepan/VideosController.showVideos")
 
 Route.group(()=>{
   Route.group(()=>{
-    Route.post("token","Auth/LoginController.login")
-    Route.post('registrasi-perusahaan',"Auth/RegistrasiPerusahaansController.registrasi")
-    Route.post('registrasi-user', "Auth/RegisterUsersController.registrasi")
+    Route.get("login","Auth/LoginController.login")
+    Route.post("login-callback","Auth/LoginController.loginCallback")
   }).prefix("auth")
 
   Route.get("info","AppsController.index")

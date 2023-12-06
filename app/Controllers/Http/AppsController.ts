@@ -481,50 +481,7 @@ export default class AppsController {
       return menus;
     }
 
-    /**
-     * MENU OPD
-     */
 
-    if(authent == 'opd'){
-      menus = [
-        {
-          title: "Dashboard",
-          type: "item",
-          icon: "mdi-view-dashboard",
-          route: "/backend/dashboard",
-        },
-        { title: "BID. KESELAMATAN", type: "subheader", route: "/" },
-
-        {
-          title: "Realisasi RENAKSI",
-          icon: "mdi-floor-plan",
-          route: "/backend/keselamatan-renaksi",
-          type: "item",
-        },
-        {
-          title: "Monitoring Renaksi",
-          icon: "mdi-book-search",
-          route: "/backend/keselamatan-monitoring-renaksi",
-          type: "item",
-        },
-
-        { title: "Utility", type: "subheader", route: "/" },
-        {
-          title: "Profil Pengguna",
-          icon: "accessibility",
-          route: "/backend/profil-akun",
-          type: "item",
-        },
-        {
-          title: "Ganti Kata Sandi",
-          icon: "vpn_key",
-          route: "/backend/chngpwd",
-          type: "item",
-        },
-
-      ];
-      return menus;
-    }
 
 
     /**
@@ -539,7 +496,7 @@ export default class AppsController {
           route: "/backend/dashboard",
         },
         {
-          title: "Lap Prl. Jalan dan Laka",
+          title: "Formulir Pendaftaran ",
           icon: "mdi-bullhorn",
           route: "/backend/user-pelaporan",
           type: "item",
@@ -565,49 +522,6 @@ export default class AppsController {
       return menus;
     }
 
-    /**
-     * Menu User
-     */
-     if(authent == 'perusahaan'){
-      menus = [
-        {
-          title: "Dashboard",
-          type: "item",
-          icon: "mdi-view-dashboard",
-          route: "/backend/perusahaan-dashboard",
-        },
-        {
-          title: "Profil Perusahaan",
-          type: "item",
-          icon: "mdi-office-building-marker-outline",
-          route: "perusahaan-profil",
-        },
-        { title: "Aktifitas", type: "subheader", route: "/" },
 
-        {
-          title: "Permohonan Ramp Check",
-          type: "item",
-          icon: "mdi-clipboard-list",
-          route: "perusahaan-permohonan",
-        },
-
-        { title: "Utility", type: "subheader", route: "/" },
-        {
-          title: "Profil Pengguna",
-          icon: "accessibility",
-          route: "/backend/profil-akun",
-          type: "item",
-        },
-        {
-          title: "Ganti Kata Sandi",
-          icon: "vpn_key",
-          route: "/backend/chngpwd",
-          type: "item",
-        },
-
-
-      ];
-      return menus;
-    }
   }
 }
