@@ -22,7 +22,7 @@ export default class AppsController {
     app_background: Env.get("BASE_URL")+ "/images/apps/"+   appinfo?.app_background,
     app_nav : Env.get("BASE_URL")+ "/images/apps/"+   appinfo?.app_nav,
     app_url: appinfo?.app_url,
-    app_company: appinfo?.app_company,
+    app_company: 'Dinas Perubungan Provinsi Banten',//appinfo?.app_company,
     app_slogan: appinfo?.app_slogan,
     app_address: appinfo?.app_address,
     app_wa: appinfo?.app_wa
