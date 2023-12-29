@@ -52,4 +52,16 @@ export default class DataJalan extends compose(BaseModel,SoftDeletes) {
       polygon: this.polygon
     }
   }
+
+@computed
+public get datates()
+{
+  return{
+    id:this.id ,
+    name:this.name
+  }
+}
+
+
+
 }
